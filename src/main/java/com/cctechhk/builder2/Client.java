@@ -11,11 +11,12 @@ package com.cctechhk.builder2;
 
 public class Client {
 	public static void main(String[] args) {
-		//导演
+		//建造者
 		Builder builder = new ConcreteBuilder();
+		//导演者
 		Director director = new Director(builder);
 		director.construct();
-		//建筑者
+		//获取产品
 		Product product = builder.retrieveResult();
 		System.out.println(product.getPart1());
 		System.out.println(product.getPart2());
